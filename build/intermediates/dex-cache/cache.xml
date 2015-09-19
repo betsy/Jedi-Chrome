@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\user\Documents\GitHub\LexHack-2015\CardboardSample\libs\libprotobuf-java-2.6-nano.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="2ba3ce68542db5a4b672a22606e4fd4631ed5c4f">
+        <dex dex="C:\Users\user\Documents\GitHub\LexHack-2015\CardboardSample\build\intermediates\pre-dexed\debug\libprotobuf-java-2.6-nano-a778b8c35053d8f3ad955913405d7f6f2221641f.jar" />
+    </item>
+    <item
+        jar="C:\Users\user\Documents\GitHub\LexHack-2015\CardboardSample\libs\cardboard.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="c3f82b1a4517f1d62a014512b9b3fd06af2987e8">
+        <dex dex="C:\Users\user\Documents\GitHub\LexHack-2015\CardboardSample\build\intermediates\pre-dexed\debug\cardboard-623a13e42fbfa87f28a66aba045fd5d0b9512bd1.jar" />
+    </item>
+
+</items>
