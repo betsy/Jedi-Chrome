@@ -44,7 +44,7 @@ public class toPic {
             }
         }
 
-        int[][] Processed = toBeInit.ProcessImage("red", result);
+        int[][] Processed = toBeInit.ProcessImage(toBeInit.findOrig(result), result);
         int[] finalProcess = new int[width * height];
         int index1 = 0;
         for (int n = 0; n < Processed.length; n++) {
@@ -66,6 +66,7 @@ public class toPic {
         //} catch (IOException e) {
         //}
         return processedImg;
+        //return newImage;
 
     }
 }

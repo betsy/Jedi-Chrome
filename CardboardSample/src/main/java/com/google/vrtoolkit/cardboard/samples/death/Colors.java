@@ -5,6 +5,7 @@ package main.java.com.google.vrtoolkit.cardboard.samples.death;
  */
 import java.awt.image.BufferedImage;
 import java.util.*;
+
 import java.awt.image.DataBufferByte;
 import java.io.IOException;
 import javax.imageio.ImageIO;
@@ -91,7 +92,7 @@ public class Colors {
         final int[][] result = new int[this.height][this.width];
         final int pixelLength = 3;
         for (int pixel = 0, row = 0, col = 0; pixel < pixels.length; pixel += pixelLength){
-            if((row < 432 || row > 648) && (col < 384 || col > 576))
+            if((row > screenW*2/5 || row < screenW*3/5) && (col > screenH*2/5 || col < screenH*3/5))
             {
                 String color = containsColor(pixels[pixel]);
                 if (color.equals(orig))
@@ -102,6 +103,16 @@ public class Colors {
                 {
                     result[row][col] = BWPix(pixels[pixel]);
                 }
+            }
+
+            if((row > screenW*2/5 && row < screenW*3/5) && (col > screenH*2/5 && col < screenH*3/5))
+            {
+                    result[row][col] = pixels[pixel];
+            }
+
+            else
+            {
+                result[row][col] = result[row][col];
             }
             col++;
             if (col == width) {
@@ -164,6 +175,7 @@ public class Colors {
 
         int grayLevel = (r + g + b) / 3;
         int gray = (grayLevel << 16) + (grayLevel << 8) + grayLevel;
+        //System.out.println(gray);
         return gray;
         //return (int) (0.2989 * (((int) pixel & 0xff) >> 16) + 0.5870 * (((int) pixel & 0xff) >> 8) + 0.114 * ((int) pixel & 0xff));
     }
